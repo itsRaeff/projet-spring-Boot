@@ -11,12 +11,9 @@ public class Championnat {
     private Long idChampionnat;
     
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private Categorie categorie;
     
-    @Column(nullable = false)
     private String libelle;
     
-    @Column(nullable = false)
     private Integer annee;
 }

@@ -10,12 +10,9 @@ public class Equipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEquipe;
     
-    @Column(nullable = false)
     private String libelle;
     
-    @Column(nullable = false)
     private Integer nbPointsTotal;
     
-    @Column(nullable = false)
     private Integer classementGeneraux;
 }

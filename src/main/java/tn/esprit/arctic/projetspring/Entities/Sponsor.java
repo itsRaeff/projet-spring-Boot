@@ -10,15 +10,15 @@ public class Sponsor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSponsor;
     
-    @Column(nullable = false)
+
     private String nom;
     
-    @Column(nullable = false)
+
     private String pays;
     
-    @Column(nullable = false)
+
     private Float budgetAnnuel;
     
-    @Column(nullable = false)
+
     private Boolean bloquerContrat;
 }
