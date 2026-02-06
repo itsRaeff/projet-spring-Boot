@@ -10,9 +10,12 @@ public class Pilote {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPilote;
     
+    @Column(nullable = false)
     private String libellePilote;
     
+    @Column(nullable = false)
     private Integer nbPointsTotaux;
     
+    @Column(nullable = false)
     private Integer classementGeneraux;
 }

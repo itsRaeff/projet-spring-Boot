@@ -10,9 +10,12 @@ public class Contrat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idContrat;
     
+    @Column(nullable = false)
     private Float montant;
     
+    @Column(nullable = false)
     private String annee;
     
+    @Column(nullable = false)
     private Boolean archived;
 }

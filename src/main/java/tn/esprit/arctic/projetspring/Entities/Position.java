@@ -10,9 +10,9 @@ public class Position {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPosition;
     
-
+    @Column(nullable = false)
     private Integer classement;
     
-
+    @Column(nullable = false)
     private Integer nbPoints;
 }

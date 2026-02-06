@@ -11,7 +11,9 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCourse;
     
+    @Column(nullable = false)
     private String emplacement;
     
+    @Column(nullable = false)
     private LocalDate dateDebut;
 }
