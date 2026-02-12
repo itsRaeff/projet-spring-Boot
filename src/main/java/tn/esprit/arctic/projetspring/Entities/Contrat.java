@@ -18,4 +18,14 @@ public class Contrat {
     
     @Column(nullable = false)
     private Boolean archived;
+
+
+    @ManyToOne
+    @JoinColumn(name = "sponsor_id")
+    private Sponsor sponsor;
+
+    @ManyToOne
+    @JoinColumn(name = "equipe_id")
+    private Equipe equipe;
+
 }

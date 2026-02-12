@@ -16,4 +16,10 @@ public class DetailChampionnat {
     @Column(nullable = false)
 
     private String description;
+
+
+
+    @OneToOne(mappedBy = "detailChampionnat")
+    private Championnat championnat;
+
 }

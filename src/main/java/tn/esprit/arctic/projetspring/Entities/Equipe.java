@@ -2,6 +2,8 @@ package tn.esprit.arctic.projetspring.Entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "equipe")
 public class Equipe {
@@ -18,4 +20,12 @@ public class Equipe {
     
     @Column(nullable = false)
     private Integer classementGeneraux;
+
+    @OneToMany(mappedBy = "equipe")
+    private List<Pilote> pilotes;
+
+    @OneToMany(mappedBy = "equipe")
+    private List<Contrat> contrats;
+
+
 }

@@ -2,6 +2,8 @@ package tn.esprit.arctic.projetspring.Entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "pilote")
 public class Pilote {
@@ -18,4 +20,16 @@ public class Pilote {
     
     @Column(nullable = false)
     private Integer classementGeneraux;
+
+    @Enumerated(EnumType.STRING)
+    private Categorie categorie;
+
+    @ManyToOne
+    @JoinColumn(name = "equipe_id")
+    private Equipe equipe;
+
+    @OneToMany(mappedBy = "pilote")
+    private List<Position> positions;
+
+
 }

@@ -2,6 +2,8 @@ package tn.esprit.arctic.projetspring.Entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "sponsor")
 public class Sponsor {
@@ -21,4 +23,8 @@ public class Sponsor {
     
     @Column(nullable = false)
     private Boolean bloquerContrat;
+
+    @OneToMany(mappedBy = "sponsor")
+    private List<Contrat> contrats;
+
 }
