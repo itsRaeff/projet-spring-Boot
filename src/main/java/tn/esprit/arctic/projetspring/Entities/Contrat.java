@@ -17,7 +17,7 @@ public class Contrat {
     private String annee;
     
     @Column(nullable = false)
-    private Boolean archived;
+    private Boolean archived = false;
 
 
     @ManyToOne

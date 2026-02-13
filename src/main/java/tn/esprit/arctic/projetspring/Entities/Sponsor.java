@@ -1,10 +1,20 @@
 package tn.esprit.arctic.projetspring.Entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.List;
 
+
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "sponsor")
 public class Sponsor {
     
@@ -20,9 +30,13 @@ public class Sponsor {
     
     @Column(nullable = false)
     private Float budgetAnnuel;
-    
+
+    Boolean archived = false;
+    LocalDate dateCreation = LocalDate.now();
+    LocalDate dateDerniereModification;
+
     @Column(nullable = false)
-    private Boolean bloquerContrat;
+    private Boolean bloquerContrat = false;
 
     @OneToMany(mappedBy = "sponsor")
     private List<Contrat> contrats;
