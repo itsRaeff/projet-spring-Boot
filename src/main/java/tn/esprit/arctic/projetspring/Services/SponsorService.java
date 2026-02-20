@@ -1,12 +1,17 @@
 package tn.esprit.arctic.projetspring.Services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.projetspring.Entities.Sponsor;
 import tn.esprit.arctic.projetspring.Repository.SponsorRepository;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class SponsorService implements ISponsorService{
-    SponsorRepository sp;
+    
+    private SponsorRepository sp;
 
 
     @Override
