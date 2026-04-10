@@ -2,7 +2,9 @@ package tn.esprit.arctic.projetspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
+@EnableScheduling
 @SpringBootApplication //li yabda beha ki truni
 public class ProjetSpringApplication {
 
